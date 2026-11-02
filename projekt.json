@@ -1,6 +1,6 @@
 {
   "id": "P12",
-  "status": "initialisiert",
+  "status": "P12-T01 erledigt; Prozessentwurf und Beispieldaten lokal geprueft",
   "businessImplemented": false,
   "fixture": "beispieldaten/antraege.json",
   "format": "json",

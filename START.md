@@ -1,24 +1,27 @@
 # Technischer Einstieg — P12
 
+## P12-T01 lokal nachvollziehen
 
-## Einstiegspunkt ausführen
+Im Projektordner mit der vorhandenen Laufzeit ausführen:
 
-Voraussetzungen: Microsoft-Mandant für die Power-Automate-Variante; SAP-Lernzugang für SAP und ABAP.
+~~~powershell
+uv run --offline --python 3.12 python -X utf8 nachweise/pruefe_beispiele.py
+~~~
+
+Tatsächlich verwendete Version steht in [P12-T01-pruefung.txt](nachweise/P12-T01-pruefung.txt). Keine zusätzlichen Pakete erforderlich. Der vorhandene uv-Cache bleibt im lokalen Projekt-Ausgabeordner.
+
+Erwartetes Ergebnis: fünf unveränderte Originalanträge, drei innerhalb der inklusiven 500-Euro-Grenze, einer oberhalb und A05 mit negativem Betrag als beabsichtigter Fehlerfall. Der Prüflauf endet bei abweichenden Daten mit einem Fehler. Er schreibt keine Anträge und führt keine Freigaben aus. Fachliche Annahmen und Rollentrennung stehen in [PROZESS.md](PROZESS.md).
+
+## Vorhandener Einstiegspunkt
 
 ~~~powershell
 node src/prozess.cjs
 ~~~
 
-Das Startprogramm meldet den Initialisierungsstand. Fachfunktionen sind bewusst noch nicht implementiert und melden dies bei einem Aufruf. Fehlende Bibliotheken und Frameworks erst im passenden Ticket mit ihrer tatsächlichen Version ergänzen.
+Dieser Einstieg meldet weiterhin den Initialisierungsstand. Die Funktion `uebergang` ist noch nicht implementiert; dies gehört zu P12-T02 und wurde in dieser Phase nicht vorweggenommen.
 
-## Nächste Aufgabe
+## Spätere Voraussetzungen
 
-Rollen, Freigabe, Ablehnung und Betragsgrenze beschreiben; fünf Beispiele vorbereiten.
+Microsoft-Mandant für die Power-Automate-/SharePoint-Variante und SAP-Lernzugang für SAP/ABAP. Für die lokale Beispieldatenprüfung sind sie nicht erforderlich. Diese Produkte wurden in P12-T01 nicht verwendet; ein lokaler Prüflauf ersetzt keinen Produktnachweis.
 
-## Technische Quellen
-
-- [Python-CSV-Modul](https://docs.python.org/3/library/csv.html)
-- [Offizielle Angular-CLI-Anleitung](https://angular.dev/tools/cli/setup-local)
-- [WPF mit .NET](https://learn.microsoft.com/de-de/dotnet/desktop/wpf/get-started/create-app-visual-studio)
-
-Vor dem Einbinden eines Frameworks dessen aktuelle offizielle Anleitung lesen.
+Nächster getrennter Schritt: P12-T02, frühestens am 2. November 2026 gemäß Zeitplan, mit tatsächlicher Prüfung seiner Voraussetzungen. Jetzt keine Folgephase beginnen.
