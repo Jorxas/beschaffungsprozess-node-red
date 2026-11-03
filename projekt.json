@@ -1,7 +1,10 @@
 {
   "id": "P12",
-  "status": "P12-T01 erledigt; Prozessentwurf und Beispieldaten lokal geprueft",
-  "businessImplemented": false,
+  "status": "P12-T02 erledigt; lokaler Vertrag und Zustandsprototyp geprueft; Produktanbindungen offen",
+  "businessImplemented": true,
+  "umsetzungsumfang": "Nur lokaler Beschaffungsprototyp; keine Produktnutzung, ERP-Anbindung oder Gesamtabnahme",
+  "lokalerVertrag": "vertrag/prozess.json",
+  "lokalePruefung": "node nachweise/pruefe_prozess.cjs",
   "fixture": "beispieldaten/antraege.json",
   "format": "json",
   "expectedRecords": 5,

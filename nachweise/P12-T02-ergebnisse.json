@@ -1,0 +1,287 @@
+{
+  "pruefzeit": "2026-11-02T04:04:52.580Z",
+  "laufzeit": "v24.13.0",
+  "eingabe_sha256": "3a32b603fa52824ed32e0483c576398737f050e6a46effa2ce367ccbab438fb8",
+  "hinweis": "Lokale synthetische Ausführung; Testkopien sind keine Historie und kein Produktnachweis.",
+  "originaldurchlauf": [
+    {
+      "antrag": {
+        "id": "A01",
+        "betrag": 50,
+        "zustand": "genehmigt",
+        "verantwortlich": "antragsteller",
+        "waehrung": "EUR",
+        "antragsteller": "synthetisch-A01",
+        "ausgangszustand": "entwurf",
+        "aenderungen": [
+          {
+            "von": "entwurf",
+            "nach": "eingereicht",
+            "aktion": "einreichen",
+            "person": {
+              "kennung": "synthetisch-A01",
+              "rolle": "antragsteller"
+            },
+            "zeitpunkt": "2026-11-02T04:04:52.580Z",
+            "betrag": 50,
+            "waehrung": "EUR",
+            "begruendung": "Synthetischer Beschaffungsbedarf zur lokalen Vorführung",
+            "entscheidungskriterium": "Gültiger Betrag; Einreichung durch Antragsteller"
+          },
+          {
+            "von": "eingereicht",
+            "nach": "genehmigt",
+            "aktion": "genehmigen",
+            "person": {
+              "kennung": "synthetisch-pruefer",
+              "rolle": "freigabeverantwortlicher"
+            },
+            "zeitpunkt": "2026-11-02T04:04:52.580Z",
+            "betrag": 50,
+            "waehrung": "EUR",
+            "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
+            "entscheidungskriterium": "Betrag bis einschließlich 500 EUR; Bedarf begründet; Budget verfügbar",
+            "bedarf_begruendet": true,
+            "budget_verfuegbar": true
+          }
+        ]
+      },
+      "hinweis": "Nur lokale neue Übergänge protokolliert."
+    },
+    {
+      "antrag": {
+        "id": "A02",
+        "betrag": 250,
+        "zustand": "genehmigt",
+        "verantwortlich": "antragsteller",
+        "waehrung": "EUR",
+        "antragsteller": "synthetisch-A02",
+        "ausgangszustand": "eingereicht",
+        "aenderungen": [
+          {
+            "von": "eingereicht",
+            "nach": "genehmigt",
+            "aktion": "genehmigen",
+            "person": {
+              "kennung": "synthetisch-pruefer",
+              "rolle": "freigabeverantwortlicher"
+            },
+            "zeitpunkt": "2026-11-02T04:04:52.580Z",
+            "betrag": 250,
+            "waehrung": "EUR",
+            "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
+            "entscheidungskriterium": "Betrag bis einschließlich 500 EUR; Bedarf begründet; Budget verfügbar",
+            "bedarf_begruendet": true,
+            "budget_verfuegbar": true
+          }
+        ]
+      },
+      "hinweis": "Nur lokale neue Übergänge protokolliert."
+    },
+    {
+      "antrag": {
+        "id": "A03",
+        "betrag": 500,
+        "zustand": "genehmigt",
+        "verantwortlich": "antragsteller",
+        "waehrung": "EUR",
+        "antragsteller": "synthetisch-A03",
+        "ausgangszustand": "genehmigt",
+        "aenderungen": []
+      },
+      "hinweis": "Vorhandener Endzustand erhalten; historische Änderungsspur unbekannt."
+    },
+    {
+      "antrag": {
+        "id": "A04",
+        "betrag": 1500,
+        "zustand": "abgelehnt",
+        "verantwortlich": "antragsteller",
+        "waehrung": "EUR",
+        "antragsteller": "synthetisch-A04",
+        "ausgangszustand": "abgelehnt",
+        "aenderungen": []
+      },
+      "hinweis": "Vorhandener Endzustand erhalten; historische Änderungsspur unbekannt."
+    },
+    {
+      "antrag": {
+        "id": "A05",
+        "betrag": -5,
+        "zustand": "entwurf",
+        "verantwortlich": "antragsteller",
+        "waehrung": "EUR",
+        "antragsteller": "synthetisch-A05",
+        "ausgangszustand": "entwurf",
+        "aenderungen": []
+      },
+      "fehler": "Betrag muss positiv, endlich und centgenau sein."
+    }
+  ],
+  "synthetische_regeltests": [
+    {
+      "id": "A03",
+      "betrag": 500,
+      "zustand": "genehmigt",
+      "verantwortlich": "antragsteller",
+      "waehrung": "EUR",
+      "antragsteller": "synthetisch-A03",
+      "ausgangszustand": "entwurf",
+      "aenderungen": [
+        {
+          "von": "entwurf",
+          "nach": "eingereicht",
+          "aktion": "einreichen",
+          "person": {
+            "kennung": "synthetisch-A03",
+            "rolle": "antragsteller"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 500,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Gültiger Betrag; Einreichung durch Antragsteller"
+        },
+        {
+          "von": "eingereicht",
+          "nach": "genehmigt",
+          "aktion": "genehmigen",
+          "person": {
+            "kennung": "synthetisch-pruefer",
+            "rolle": "freigabeverantwortlicher"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 500,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Betrag bis einschließlich 500 EUR; Bedarf begründet; Budget verfügbar",
+          "bedarf_begruendet": true,
+          "budget_verfuegbar": true
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "betrag": 1500,
+      "zustand": "abgelehnt",
+      "verantwortlich": "antragsteller",
+      "waehrung": "EUR",
+      "antragsteller": "synthetisch-A04",
+      "ausgangszustand": "entwurf",
+      "aenderungen": [
+        {
+          "von": "entwurf",
+          "nach": "eingereicht",
+          "aktion": "einreichen",
+          "person": {
+            "kennung": "synthetisch-A04",
+            "rolle": "antragsteller"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 1500,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Gültiger Betrag; Einreichung durch Antragsteller"
+        },
+        {
+          "von": "eingereicht",
+          "nach": "abgelehnt",
+          "aktion": "ablehnen",
+          "person": {
+            "kennung": "synthetisch-pruefer",
+            "rolle": "freigabeverantwortlicher"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 1500,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Betragsgrenze überschritten",
+          "bedarf_begruendet": true,
+          "budget_verfuegbar": true
+        }
+      ]
+    },
+    {
+      "id": "A02",
+      "betrag": 250,
+      "zustand": "abgelehnt",
+      "verantwortlich": "antragsteller",
+      "waehrung": "EUR",
+      "antragsteller": "synthetisch-A02",
+      "ausgangszustand": "entwurf",
+      "aenderungen": [
+        {
+          "von": "entwurf",
+          "nach": "eingereicht",
+          "aktion": "einreichen",
+          "person": {
+            "kennung": "synthetisch-A02",
+            "rolle": "antragsteller"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 250,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Gültiger Betrag; Einreichung durch Antragsteller"
+        },
+        {
+          "von": "eingereicht",
+          "nach": "abgelehnt",
+          "aktion": "ablehnen",
+          "person": {
+            "kennung": "synthetisch-pruefer",
+            "rolle": "freigabeverantwortlicher"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 250,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Budget nicht verfügbar",
+          "bedarf_begruendet": true,
+          "budget_verfuegbar": false
+        }
+      ]
+    },
+    {
+      "id": "A01",
+      "betrag": 50,
+      "zustand": "abgelehnt",
+      "verantwortlich": "antragsteller",
+      "waehrung": "EUR",
+      "antragsteller": "synthetisch-A01",
+      "ausgangszustand": "entwurf",
+      "aenderungen": [
+        {
+          "von": "entwurf",
+          "nach": "eingereicht",
+          "aktion": "einreichen",
+          "person": {
+            "kennung": "synthetisch-A01",
+            "rolle": "antragsteller"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 50,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Gültiger Betrag; Einreichung durch Antragsteller"
+        },
+        {
+          "von": "eingereicht",
+          "nach": "abgelehnt",
+          "aktion": "ablehnen",
+          "person": {
+            "kennung": "synthetisch-pruefer",
+            "rolle": "freigabeverantwortlicher"
+          },
+          "zeitpunkt": "2026-11-02T04:04:52.580Z",
+          "betrag": 50,
+          "waehrung": "EUR",
+          "begruendung": "Ausdrücklich synthetischer Regeltest",
+          "entscheidungskriterium": "Bedarf nicht begründet",
+          "bedarf_begruendet": false,
+          "budget_verfuegbar": true
+        }
+      ]
+    }
+  ]
+}
