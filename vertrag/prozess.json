@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "geltung": "Lokaler Beschaffungsprototyp; kein ERP-, SAP- oder Power-Automate-Vertrag",
+  "waehrung": "EUR",
+  "betragsgrenze_euro": 500,
+  "zustaende": ["entwurf", "eingereicht", "genehmigt", "abgelehnt"],
+  "uebergaenge": {
+    "einreichen": { "von": "entwurf", "nach": "eingereicht", "rolle": "antragsteller" },
+    "genehmigen": { "von": "eingereicht", "nach": "genehmigt", "rolle": "freigabeverantwortlicher" },
+    "ablehnen": { "von": "eingereicht", "nach": "abgelehnt", "rolle": "freigabeverantwortlicher" }
+  },
+  "struktur": {
+    "antrag": {
+      "id": "Vorhandene Antragskennung",
+      "betrag": "Positive endliche EUR-Zahl mit höchstens zwei Nachkommastellen; Fehlerbeispiel bleibt erhalten",
+      "zustand": "Aktueller Zustand aus zustaende",
+      "verantwortlich": "antragsteller; fachlicher Inhaber bleibt unverändert",
+      "waehrung": "EUR",
+      "antragsteller": "Synthetische Personenkennung; keine Anmeldung oder Identitätsprüfung",
+      "ausgangszustand": "Zustand der importierten Momentaufnahme",
+      "aenderungen": "Liste ausschließlich der seit dem Import ausgeführten Übergänge"
+    },
+    "aktion": {
+      "art": "einreichen, genehmigen oder ablehnen",
+      "person": { "kennung": "Nichtleere synthetische Kennung", "rolle": "Rolle gemäß Übergang" },
+      "zeitpunkt": "UTC im Format YYYY-MM-DDTHH:mm:ss.sssZ; nicht vor letzter Änderung",
+      "begruendung": "Nichtleerer Text",
+      "bedarf_begruendet": "Wahrheitswert, bei Entscheidungen erforderlich",
+      "budget_verfuegbar": "Wahrheitswert, bei Entscheidungen erforderlich"
+    },
+    "aenderung": {
+      "von": "Vorheriger Zustand",
+      "nach": "Folgezustand",
+      "aktion": "Ausgeführte Aktion",
+      "person": "Kopie der Kennung und Rolle",
+      "zeitpunkt": "Zeitpunkt der lokalen Aktion",
+      "betrag": "Betrag bei Ausführung",
+      "waehrung": "EUR",
+      "begruendung": "Übernommener Begründungstext",
+      "entscheidungskriterium": "Aus den fachlichen Regeln abgeleiteter Grund",
+      "bedarf_begruendet": "Nur bei Entscheidungen: übernommener Wahrheitswert",
+      "budget_verfuegbar": "Nur bei Entscheidungen: übernommener Wahrheitswert"
+    }
+  },
+  "regeln": [
+    "Genehmigung nur bis einschließlich 500 EUR bei begründetem Bedarf und verfügbarem Budget.",
+    "Ablehnung nur bei Überschreitung der Grenze oder fehlendem Bedarf oder Budget.",
+    "Entscheidende Person muss vom Antragsteller verschieden sein; keine Selbstfreigabe.",
+    "Genehmigt und abgelehnt sind Endzustände. Ungültiger Betrag verhindert Einreichung.",
+    "Importierte Historie wird nicht erfunden. Das Protokoll ist lokal und nicht manipulationssicher."
+  ]
+}

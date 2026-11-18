@@ -1,0 +1,65 @@
+{
+    "projekt":  "P12",
+    "ticket":  "P12-T02",
+    "zustand":  "erledigt",
+    "fertigstellung_utc":  "2026-11-02T04:05:43.9956760+00:00",
+    "fertigstellung_berlin":  "2026-11-02 05:05:43 +01:00",
+    "messbeginn_utc":  "2026-11-02T04:00:30.0000000+00:00",
+    "assistentenzeit_sekunden":  314,
+    "studentische_schaetzung_minuten":  60,
+    "veroeffentlichung":  "Ausstehend; getrennt durch übergeordneten Dienst",
+    "dateien":  [
+                    {
+                        "pfad":  "README.md",
+                        "sha256":  "c0aea2fdfd3b93051b9c9a7809766917766e70b9d8a6074f5d0dd761c6b487b5"
+                    },
+                    {
+                        "pfad":  "START.md",
+                        "sha256":  "c2cb29599a6302938673048e4b1b8c0464d4f0d1ccc7efe7a3a1b56ad6fab34c"
+                    },
+                    {
+                        "pfad":  "ARBEITSJOURNAL.md",
+                        "sha256":  "6edaf2b956cb48133e0c30f4c122457087e033bdd422034984447932b4e72d42"
+                    },
+                    {
+                        "pfad":  "projekt.json",
+                        "sha256":  "4d75f52440728b531460687df396c786f742be12cb026b4308cee11d0070f642"
+                    },
+                    {
+                        "pfad":  "tickets/P12-T02.md",
+                        "sha256":  "b38ad2326cafb01cc5d8b192b29fe9247e10e9c0304aa9e1a7e92fefb1a11c58"
+                    },
+                    {
+                        "pfad":  "src/prozess.cjs",
+                        "sha256":  "2eff3637076f378d3e321b9de3cf20dc20d329b20de576016dfbfb4698180534"
+                    },
+                    {
+                        "pfad":  "vertrag/prozess.json",
+                        "sha256":  "605a76f0a40cc534d7fab71ddaad262adca1bad7d5c0b6bb34690ad48bc21ebb"
+                    },
+                    {
+                        "pfad":  "beispieldaten/antraege.json",
+                        "sha256":  "3a32b603fa52824ed32e0483c576398737f050e6a46effa2ce367ccbab438fb8"
+                    },
+                    {
+                        "pfad":  "nachweise/pruefe_prozess.cjs",
+                        "sha256":  "bd8f06dbd4dd7552bc94714cd8eba0f8f2df82b5ca42e3caf987c20d634449d6"
+                    },
+                    {
+                        "pfad":  "nachweise/P12-T02-pruefung.txt",
+                        "sha256":  "34825d956006e570e61c251e7e55a54cafb46406ff866bf59d13fc65894b1ffd"
+                    },
+                    {
+                        "pfad":  "nachweise/P12-T02-ergebnisse.json",
+                        "sha256":  "a8b512fc3aa5550c59f0a5adaa6c934ff83e54074f0c5867a4e2ceb16662d00c"
+                    },
+                    {
+                        "pfad":  "nachweise/P12-T02-startpruefung.txt",
+                        "sha256":  "d370ccc16137cccba3ce304e22f6618a080b0fb13b38e8025a685dc09a13ec3e"
+                    },
+                    {
+                        "pfad":  "ausgabe/P12-T02-prototyp.json",
+                        "sha256":  "9e7e4d2d8aeb86bcaf55947720acbe6e9efc2317cd2c81498417153e919d675b"
+                    }
+                ]
+}
