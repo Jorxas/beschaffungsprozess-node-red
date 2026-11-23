@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Beschaffungsprozess Demo</title>
+<meta name="description" content="Demo des Lernprojekts: Beschaffungsanträge mit getrennten Rollen und Betragsgrenze, echter Zustandsautomat im Browser.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23a14a0b%27/%3E%3Cpath d=%27M8 17l5 5 11-12%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%274%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#demo" data-i="skip">Zur Demo springen</a>
+<header class="kopf">
+  <div class="breit kopf-innen">
+    <span class="kopf-label" data-i="kopfLabel">Lernprojekt · Demo</span>
+    <div class="sprache" role="group" aria-label="Sprache / Langue" id="sprache">
+      <button type="button" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</header>
+
+<main class="breit" id="inhalt">
+  <section class="hero">
+    <h1 data-i="h1">Beschaffung mit nachvollziehbarer Freigabe</h1>
+    <p class="lead" data-i="lead"></p>
+    <ul class="badges"><li data-i="badge1"></li><li data-i="badge2"></li><li data-i="badge3"></li></ul>
+    <p><a class="link" href="https://github.com/Jorxas/beschaffungsprozess-node-red" data-i="repo">Quellcode auf GitHub</a></p>
+  </section>
+
+  <section class="vier" aria-label="Kurzfassung">
+    <article class="karte"><h2 data-i="aufgabeH"></h2><p data-i="aufgabe"></p></article>
+    <article class="karte"><h2 data-i="datenH"></h2><p data-i="daten"></p></article>
+    <article class="karte"><h2 data-i="ergebnisH"></h2><p data-i="ergebnis"></p></article>
+    <article class="karte"><h2 data-i="grenzenH"></h2><p data-i="grenzen"></p></article>
+  </section>
+
+  <section class="abschnitt" aria-labelledby="regeln-h">
+    <h2 id="regeln-h" data-i="regelnH"></h2>
+    <ul class="liste" id="regeln"></ul>
+  </section>
+
+  <section id="demo" class="abschnitt" aria-labelledby="demo-h" tabindex="-1">
+    <h2 id="demo-h" data-i="demoH"></h2>
+    <p data-i="demoLead"></p>
+    <p class="hinweis" id="ehrlich"></p>
+
+    <div class="spalten">
+      <div class="block">
+        <h3 data-i="schritt1"></h3>
+        <div class="feld">
+          <label for="antrag" data-i="antragWahl"></label>
+          <select id="antrag"></select>
+        </div>
+        <div id="eigen" class="eigen" hidden>
+          <div class="feld">
+            <label for="eigen-betrag" data-i="betragLabel"></label>
+            <input id="eigen-betrag" type="text" inputmode="decimal" autocomplete="off" value="250">
+          </div>
+          <div class="feld">
+            <label for="eigen-zustand" data-i="startzustand"></label>
+            <select id="eigen-zustand"></select>
+          </div>
+        </div>
+        <dl class="antrag" id="antragsdaten"></dl>
+        <div class="zustaende" id="zustaende" role="img"></div>
+      </div>
+
+      <div class="block">
+        <h3 data-i="schritt2"></h3>
+        <form id="aktionsform" autocomplete="off">
+          <div class="feld"><label for="aktion" data-i="aktion"></label><select id="aktion"></select></div>
+          <div class="zwei">
+            <div class="feld"><label for="person" data-i="person"></label><select id="person"></select></div>
+            <div class="feld"><label for="rolle" data-i="rolle"></label><select id="rolle"></select></div>
+          </div>
+          <div class="feld"><label for="begruendung" data-i="begruendung"></label><input id="begruendung" type="text"></div>
+          <div class="haken">
+            <label><input type="checkbox" id="bedarf" checked> <span data-i="bedarf"></span></label>
+            <label><input type="checkbox" id="budget" checked> <span data-i="budget"></span></label>
+          </div>
+          <div class="knoepfe">
+            <button type="submit" class="knopf" data-i="ausfuehren"></button>
+            <button type="button" class="knopf zweit" id="reset" data-i="zuruecksetzen"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <h3 data-i="schritt3"></h3>
+    <div id="meldung" class="meldung" role="status" aria-live="polite"></div>
+
+    <h3 data-i="protokollH"></h3>
+    <ol class="protokoll" id="protokoll"></ol>
+    <details class="roh"><summary data-i="rohdaten"></summary><pre id="roh"></pre></details>
+  </section>
+
+  <section class="abschnitt" aria-labelledby="alle-h">
+    <h2 id="alle-h" data-i="alleH"></h2>
+    <p data-i="alleLead"></p>
+    <table class="tab" id="alle" data-aria="alleH">
+      <thead><tr>
+        <th scope="col" data-i="colId"></th><th scope="col" data-i="colBetrag"></th><th scope="col" data-i="colVerlauf"></th>
+        <th scope="col" data-i="colAenderungen"></th><th scope="col" data-i="colHinweis"></th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section id="echt" class="abschnitt" aria-labelledby="echt-h">
+    <h2 id="echt-h" data-i="echtH"></h2>
+    <p id="echt-lead"></p>
+    <div id="schritte"></div>
+    <h3 data-i="ehrlichH"></h3>
+    <ul class="liste"><li data-i="ehrlich1"></li><li data-i="ehrlich2"></li><li data-i="ehrlich3"></li></ul>
+  </section>
+</main>
+
+<footer class="fuss">
+  <div class="breit">
+    <p data-i="fusszeile"></p>
+    <p><a class="link" href="https://jorxas.github.io/Portfolio/" data-i="portfolio"></a> ·
+       <a class="link" href="https://github.com/Jorxas/beschaffungsprozess-node-red">GitHub</a></p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="lauf-daten.js"></script>
+<script src="prozess-echt.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

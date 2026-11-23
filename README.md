@@ -30,6 +30,17 @@ node nachweise/pruefe_prozess.cjs
 
 Ausführliche technische Befehle: [START.md](START.md). [Öffentlicher Prüfstand](ABNAHME.json) und [Quellphasen](VERLAUF.json) dokumentieren Herkunft und echte Ausführungsdaten. Eine neue Repositorykopie ist kein neuer nativer Desktoplauf.
 
+## Demo
+
+Live: <https://jorxas.github.io/beschaffungsprozess-node-red/> (Deutsch, mit Umschalter auf Französisch; `?lang=fr`).
+
+Die Demo zeigt einen Anwendungsfall: einen Beschaffungsantrag freigeben. Der echte Quelltext `src/prozess.cjs` läuft unverändert im Browser (eingebettet durch `demo/erzeugen.cjs`, mit SHA-256 geprüft). Man wählt einen der fünf Beispielanträge oder gibt einen eigenen Betrag ein, führt Aktionen aus (einreichen, genehmigen, ablehnen) und sieht, was der Prozesscode erlaubt oder abweist: Selbstfreigabe, falsche Rolle, Betrag über 500 Euro, fehlendes Budget. Dazu das Änderungsprotokoll, der Gesamtlauf der fünf Beispiele und die echten Ausgaben der Projektskripte (Node 24, Python 3.13).
+
+- Gezeigt wird der veröffentlichte Stand (Phase 2 von 4). Node-RED, Export und Wiederholungsschutz sind darin noch nicht enthalten und werden nicht vorgeführt; Power Automate, SharePoint und SAP werden nicht verwendet.
+- Bedarf und Budget gibt in der Demo die bedienende Person an.
+
+Neu erzeugen: `node demo/erzeugen.cjs` (kopiert das Projekt in einen Temporärordner, führt dort die Skripte aus und schreibt `demo/lauf-daten.js` und `demo/prozess-echt.js`). Bauen und prüfen: `node tools/bauen.cjs` und `node tools/browser-pruefen.cjs` (puppeteer-core und Chrome nötig). Veröffentlicht wird der Inhalt von `dist/` auf dem Zweig `gh-pages`.
+
 ## Ergebnis des lokal geprüften Schlussstands
 
 Zwei gültige lokale Exporte, Konfliktschutz und unveränderte Wiederholung. Node-RED separat mit echtem Neustart geprüft.
