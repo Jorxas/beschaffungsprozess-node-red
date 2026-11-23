@@ -13,7 +13,7 @@ const BASIS = "/beschaffungsprozess-node-red";
 
 // 1. Eingebetteter Code gegen das Original
 {
-  const huelle = fs.readFileSync(path.join(projekt, "demo/prozess-echt.js"), "utf8");
+  const huelle = fs.readFileSync(path.join(projekt, "demo/prozess-echt.js"), "utf8").replace(/\r\n/g, "\n");
   const lauf = (() => { const w = {}; vm.runInNewContext(fs.readFileSync(path.join(projekt, "demo/lauf-daten.js"), "utf8"), { window: w }); return w.LAUF; })();
   const quelle = fs.readFileSync(path.join(projekt, "src/prozess.cjs"), "utf8").replace(/\r\n/g, "\n");
   assert(huelle.includes(quelle), "src/prozess.cjs ist unverändert in demo/prozess-echt.js enthalten");
