@@ -1,0 +1,23 @@
+{
+  "zeitpunkt": "2026-11-18T04:52:59.381Z",
+  "projekt": "P12",
+  "snapshot": "6e371e7614cfa27287759c2c37b41b565f8b1b52a7634f5498d3b542a895f951",
+  "dateien": [
+    {
+      "pfad": "src/prozess.cjs",
+      "sha256": "2eff3637076f378d3e321b9de3cf20dc20d329b20de576016dfbfb4698180534"
+    },
+    {
+      "pfad": "src/erp_export.cjs",
+      "sha256": "e2157b40760b7350ec168528d0a9e322adfbb9180584f0cf19a1bd2cbdd29547"
+    },
+    {
+      "pfad": "vertrag/prozess.json",
+      "sha256": "605a76f0a40cc534d7fab71ddaad262adca1bad7d5c0b6bb34690ad48bc21ebb"
+    },
+    {
+      "pfad": "beispieldaten/antraege.json",
+      "sha256": "3a32b603fa52824ed32e0483c576398737f050e6a46effa2ce367ccbab438fb8"
+    }
+  ]
+}

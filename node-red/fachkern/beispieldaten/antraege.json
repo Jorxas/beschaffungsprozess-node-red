@@ -1,0 +1,32 @@
+[
+  {
+    "id": "A01",
+    "betrag": 50,
+    "zustand": "entwurf",
+    "verantwortlich": "antragsteller"
+  },
+  {
+    "id": "A02",
+    "betrag": 250,
+    "zustand": "eingereicht",
+    "verantwortlich": "antragsteller"
+  },
+  {
+    "id": "A03",
+    "betrag": 500,
+    "zustand": "genehmigt",
+    "verantwortlich": "antragsteller"
+  },
+  {
+    "id": "A04",
+    "betrag": 1500,
+    "zustand": "abgelehnt",
+    "verantwortlich": "antragsteller"
+  },
+  {
+    "id": "A05",
+    "betrag": -5,
+    "zustand": "entwurf",
+    "verantwortlich": "antragsteller"
+  }
+]

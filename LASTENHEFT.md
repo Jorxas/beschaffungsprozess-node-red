@@ -14,7 +14,7 @@ Lokale Einzelbenutzung, synthetische Daten und ein vorführbarer kleiner Ablauf.
 
 - [x] A1 — Antrag von Entwurf zu eingereicht und anschließend genehmigt oder abgelehnt überführen.
 - [x] A2 — Verantwortung, Entscheidungskriterium, Betrag und Änderungsspur angeben.
-- [ ] A3 — ERP-Vertrag und tatsächlichen SAP-Lauf klar unterscheiden.
+- [x] A3 — ERP-Vertrag und tatsächlichen SAP-Lauf klar unterscheiden.
 - [x] A4 — Für Power Automate, SharePoint und SAP einen echten Nachweis oder einen ausdrücklichen Blockierungsgrund führen.
 
 ## Voraussetzungen
@@ -46,3 +46,5 @@ Modellierung eines Beschaffungsablaufs; Microsoft- oder SAP-Produkte nur bei tat
 Derzeit zutreffend: „Eigenes Lernprojekt in Vorbereitung: Beschaffungsantrag und Freigabeprozess“. „Umgesetzt“ setzt die tatsächliche Abnahme voraus.
 
 18. November: A1/A2 durch den tatsächlichen lokalen Prozesslauf geprüft. A4 durch ausdrückliche Produktblockierungsgründe erfüllt; dies ist kein Produktkompetenznachweis. A3 folgt mit dem lokalen Exportentwurf in T04.
+
+T04 am 18. November: eigener ERP-Übergabevertrag, echte lokale Duplikat-/Konfliktprüfung und klare Trennung vom nicht ausgeführten SAP-Lauf. A1–A4 im ausdrücklich bedingten lokalen Basisumfang erfüllt. Power Automate, SharePoint und SAP bleiben blockierte Produktvarianten ohne Kompetenznachweis.

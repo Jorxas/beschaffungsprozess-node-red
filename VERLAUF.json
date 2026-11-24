@@ -22,5 +22,13 @@
     "lokal_committet_am": null,
     "technisch_gesichert_am": "2026-11-17T23:38:35.639Z",
     "snapshot": "32e226b157b6b77e8a91e7286a07c2ad57329e345892aee314962e9b4cc818ee"
+  },
+  {
+    "phase": 4,
+    "ticket": "P12-T04",
+    "quellcommit": null,
+    "lokal_committet_am": null,
+    "technisch_gesichert_am": "2026-11-17T23:40:20.713Z",
+    "snapshot": "6e371e7614cfa27287759c2c37b41b565f8b1b52a7634f5498d3b542a895f951"
   }
 ]

@@ -1,12 +1,13 @@
 {
-  "zeitpunkt": "2026-11-17T23:38:34.856Z",
+  "zeitpunkt": "2026-11-17T23:40:20.095Z",
   "benutzerangabe": "Kein Geschäfts-/Hochschulzugang mit Power Automate.",
   "produktlaeufe": {
     "powerAutomate": "blockiert; kein Flow erstellt oder ausgeführt",
     "sharePoint": "blockiert; keine freigegebene Testliste/Verbindung nachgewiesen",
     "sap": "blockiert; kein freigegebenes Testsystem oder Dienst nachgewiesen"
   },
-  "lokalerExport": "Separat vorbereitete Folgearbeit, noch nicht Bestandteil des T03-Lieferstands.",
-  "gesamtfreigabe": false,
-  "lieferabgrenzung": "Ursprünglich vorgesehener bedingter Vorbereitungszweig bei bestätigtem fehlendem Zugang angewandt. Produktläufe bleiben blockiert."
+  "lokalerExport": true,
+  "gesamtfreigabe": "Nur lokaler bedingter Basisumfang; sämtliche benannten Produktläufe bleiben blockiert.",
+  "lieferabgrenzung": "Ursprünglich vorgesehener bedingter Vorbereitungszweig bei bestätigtem fehlendem Zugang angewandt. Produktläufe bleiben blockiert.",
+  "lokaleBasisabnahme": true
 }

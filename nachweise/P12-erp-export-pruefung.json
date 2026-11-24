@@ -1,0 +1,77 @@
+{
+  "zeitpunkt": "2026-11-17T23:39:00.590Z",
+  "erfolgreich": true,
+  "ausfuehrung": "Nur lokaler Prozess und eigener Exportvertrag; keine Power-Automate-, SharePoint- oder SAP-Ausführung.",
+  "quellhash": "3a32b603fa52824ed32e0483c576398737f050e6a46effa2ce367ccbab438fb8",
+  "originale": 5,
+  "befunde": [
+    {
+      "antrag": "A01",
+      "status": "neu-vorbereitet"
+    },
+    {
+      "antrag": "A02",
+      "status": "neu-vorbereitet"
+    },
+    {
+      "antrag": "A03",
+      "status": "ausgelassen",
+      "grund": "Importierter Endzustand ohne neue überprüfbare Freigabespur."
+    },
+    {
+      "antrag": "A04",
+      "status": "ausgelassen",
+      "grund": "Kein genehmigter Antrag."
+    },
+    {
+      "antrag": "A05",
+      "status": "ausgelassen",
+      "grund": "Kein genehmigter Antrag."
+    }
+  ],
+  "export": {
+    "formatversion": 1,
+    "eintraege": [
+      {
+        "daten": {
+          "formatversion": 1,
+          "exportkennung": "uebung-A01",
+          "antrag_id": "A01",
+          "betrag_cent": 5000,
+          "waehrung": "EUR",
+          "genehmigt_am": "2026-11-17T23:39:00.566Z",
+          "freigabe_person": "synthetisch-pruefer",
+          "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
+          "entscheidungskriterium": "Betrag bis einschließlich 500 EUR; Bedarf begründet; Budget verfügbar"
+        },
+        "sha256": "92416fdfd1f5d06586730a69d6e157af4684c8003f797ef6480a7880dc7e9a95"
+      },
+      {
+        "daten": {
+          "formatversion": 1,
+          "exportkennung": "uebung-A02",
+          "antrag_id": "A02",
+          "betrag_cent": 25000,
+          "waehrung": "EUR",
+          "genehmigt_am": "2026-11-17T23:39:00.566Z",
+          "freigabe_person": "synthetisch-pruefer",
+          "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
+          "entscheidungskriterium": "Betrag bis einschließlich 500 EUR; Bedarf begründet; Budget verfügbar"
+        },
+        "sha256": "f518c4ec911006fd0f9fc280c933ff97f9de5a6f56345e15a6f550821f7f20c2"
+      }
+    ]
+  },
+  "pruefungen": [
+    "Fünf Originalanträge unverändert",
+    "Nur A01/A02 mit neuer Freigabespur exportiert",
+    "A03 ohne Historie zurückgehalten",
+    "Ablehnung und Fehler ausgelassen",
+    "Wiederholung nach JSON-Neuladen ohne Duplikat",
+    "Konflikt erhält Datei bytegleich",
+    "Selbstfreigabe und falscher Betrag abgewiesen",
+    "Doppelter Eingang und beschädigter Speicher abgewiesen",
+    "Eigene Quelldatei nicht überschreibbar"
+  ],
+  "dateipruefung": "<lokaler-pfad>"
+}

@@ -82,3 +82,11 @@ P12-T03 endet mit dokumentiertem Hindernis und lokal geprüften Eingabedaten. Fo
 Der Benutzer hat keinen passenden Power-Automate-Geschäfts-/Hochschulzugang. Das ursprünglich vorgesehene Alternativergebnis „Zugangshindernis sowie Ein-/Ausgaben dokumentieren“ ist damit abgenommen. Der Produktlauf bleibt ausdrücklich blockiert; keine Ersatzsimulation als Power-Automate-Erfahrung. Power Automate und SharePoint benötigen einen zugänglichen freigegebenen Mandanten; ein SAP-Testsystem wurde ebenfalls nicht nachgewiesen.
 
 POWER_AUTOMATE_VORBEREITUNG.md enthält den geplanten Ablauf, die fünf ursprünglichen Fälle und Voraussetzungen einer späteren echten Produktprüfung. Der vorhandene lokale Prozess wurde erneut tatsächlich geprüft: node nachweise/pruefe_prozess.cjs; alle Zustands-, Rollen-, Betrags- und Zeitprüfungen bestanden. Kein Netzwerkzugriff und keine Originaländerung. Die tatsächliche neue Änderungsspur ist lokal und nicht manipulationssicher. T04 folgt mit einem eigenen lokalen Übergabeentwurf; SAP/ABAP/OData bleiben unvalidiert.
+
+## T04 — geprüfte lokale ERP-Vorbereitung
+
+Die zuvor separat entwickelten Dateien wurden unverändert übernommen und am 18. November erneut tatsächlich geprüft. Umfang und Wiederholungsbefehle stehen vollständig in ERP_UEBERGABE.md. Einfacher Einstieg: node src/vorfuehren.cjs. Ein zweiter Aufruf verwendet dieselbe gespeicherte Momentaufnahme; keine neue Entscheidung mit erfundener Vorgeschichte. Für neue Eingaben einen eigenen Arbeitsstand verwenden.
+
+node nachweise/pruefe_prozess.cjs und node nachweise/erp_export_pruefen.cjs bestanden erneut. Der zweite Prüfer erstellt ein eigenes temporäres Ausgabeverzeichnis und kontrolliert reale Dateiwiederholung und bytegleichen Erhalt bei Konflikt. Kein HTTP-, OData-, SAP- oder Microsoft-Aufruf. Das eigene JSON Schema beschreibt nur den vorgeschlagenen Übergabevertrag; es ist kein importierbarer Flow und keine offizielle SAP-Dienstdefinition. Alle eigenen Quelldateien und Protokolle bleiben lokal.
+
+Der lokale Basisumfang nach dem bedingten Lastenheft ist damit erfüllt. Die weiter blockierten Produkte benötigen vor einer späteren Kompetenznennung einen eigenen echten Lauf. Vollständige lokale Basisabnahme und vollständige Produktabdeckung sind unterschiedliche Aussagen.

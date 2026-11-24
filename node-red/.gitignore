@@ -1,0 +1,5 @@
+node_modules/
+ausgabe/
+.laufzeit/
+nachweise/lauf-*/
+nachweise/letzte-pruefung.json

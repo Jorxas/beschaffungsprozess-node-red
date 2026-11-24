@@ -1,5 +1,5 @@
 {
-  "pruefzeit": "2026-11-17T23:21:28.392Z",
+  "pruefzeit": "2026-11-17T23:39:00.495Z",
   "laufzeit": "v24.13.0",
   "eingabe_sha256": "3a32b603fa52824ed32e0483c576398737f050e6a46effa2ce367ccbab438fb8",
   "hinweis": "Lokale synthetische Ausführung; Testkopien sind keine Historie und kein Produktnachweis.",
@@ -22,7 +22,7 @@
               "kennung": "synthetisch-A01",
               "rolle": "antragsteller"
             },
-            "zeitpunkt": "2026-11-17T23:21:28.392Z",
+            "zeitpunkt": "2026-11-17T23:39:00.495Z",
             "betrag": 50,
             "waehrung": "EUR",
             "begruendung": "Synthetischer Beschaffungsbedarf zur lokalen Vorführung",
@@ -36,7 +36,7 @@
               "kennung": "synthetisch-pruefer",
               "rolle": "freigabeverantwortlicher"
             },
-            "zeitpunkt": "2026-11-17T23:21:28.392Z",
+            "zeitpunkt": "2026-11-17T23:39:00.495Z",
             "betrag": 50,
             "waehrung": "EUR",
             "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
@@ -66,7 +66,7 @@
               "kennung": "synthetisch-pruefer",
               "rolle": "freigabeverantwortlicher"
             },
-            "zeitpunkt": "2026-11-17T23:21:28.392Z",
+            "zeitpunkt": "2026-11-17T23:39:00.495Z",
             "betrag": 250,
             "waehrung": "EUR",
             "begruendung": "Lokales Szenario mit ausdrücklich angenommenem Bedarf und Budget",
@@ -136,7 +136,7 @@
             "kennung": "synthetisch-A03",
             "rolle": "antragsteller"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 500,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -150,7 +150,7 @@
             "kennung": "synthetisch-pruefer",
             "rolle": "freigabeverantwortlicher"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 500,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -177,7 +177,7 @@
             "kennung": "synthetisch-A04",
             "rolle": "antragsteller"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 1500,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -191,7 +191,7 @@
             "kennung": "synthetisch-pruefer",
             "rolle": "freigabeverantwortlicher"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 1500,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -218,7 +218,7 @@
             "kennung": "synthetisch-A02",
             "rolle": "antragsteller"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 250,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -232,7 +232,7 @@
             "kennung": "synthetisch-pruefer",
             "rolle": "freigabeverantwortlicher"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 250,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -259,7 +259,7 @@
             "kennung": "synthetisch-A01",
             "rolle": "antragsteller"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 50,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",
@@ -273,7 +273,7 @@
             "kennung": "synthetisch-pruefer",
             "rolle": "freigabeverantwortlicher"
           },
-          "zeitpunkt": "2026-11-17T23:21:28.392Z",
+          "zeitpunkt": "2026-11-17T23:39:00.495Z",
           "betrag": 50,
           "waehrung": "EUR",
           "begruendung": "Ausdrücklich synthetischer Regeltest",

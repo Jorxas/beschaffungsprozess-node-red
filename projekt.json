@@ -1,12 +1,12 @@
 {
   "id": "P12",
-  "status": "T03 bedingte Vorbereitung geprüft; Microsoft-/SAP-Produktvarianten blockiert",
-  "aktuellesTicket": "P12-T03",
-  "ticketzustand": "lokale-vorbereitung-abgeschlossen",
+  "status": "basis-lokal-geprueft; Microsoft-/SAP-Produktvarianten blockiert",
+  "aktuellesTicket": "P12-T04",
+  "ticketzustand": "lokaler-basisumfang-abgeschlossen",
   "zugangshindernis": "Benutzer hat keinen Geschäfts-/Hochschulzugang mit Power Automate. SharePoint- und SAP-Zugang nicht nachgewiesen.",
   "zugangsnachweis": "nachweise/P12-T03-zugang.json",
   "businessImplemented": true,
-  "umsetzungsumfang": "Lokaler Prozess und geplanter Produktablauf; kein echter Flow oder ERP-Produktlauf",
+  "umsetzungsumfang": "Eigener lokaler Freigabeprozess, bedingte Produktvorbereitung und eigener Exportentwurf. Kein Power-Automate-/SharePoint-/SAP-Produktlauf.",
   "lokalerVertrag": "vertrag/prozess.json",
   "lokalePruefung": "node nachweise/pruefe_prozess.cjs",
   "fixture": "beispieldaten/antraege.json",
@@ -29,6 +29,9 @@
   "implementedScope": [
     "P12-T01",
     "P12-T02",
-    "P12-T03"
-  ]
+    "P12-T03",
+    "P12-T04"
+  ],
+  "erpVertrag": "vertrag/erp-export.schema.json",
+  "erpPruefung": "node nachweise/erp_export_pruefen.cjs"
 }

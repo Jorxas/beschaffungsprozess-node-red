@@ -2,7 +2,7 @@
 
 Stand 18. November 2026: Der Benutzer hat ausdrücklich erklärt, keinen Microsoft-Geschäfts- oder Hochschulzugang mit Power Automate zu haben. Damit ist die frühere bloße Werkzeugblockade präzisiert. Ein geeignetes Konto, eine Umgebung und Erstellungs-/Ausführungsrechte sind nicht verfügbar bzw. nicht nachgewiesen. Kein Konto, Testabonnement, Mandant, Flow, Verbindung oder Nachricht wurde angelegt. Keine Anmeldung oder Sicherheitsregel wurde umgangen.
 
-Power Automate, SharePoint und SAP wurden in diesem Projekt **nicht praktisch ausgeführt**. Der [lokale Prozess](src/prozess.cjs) und die für T04 separat gesicherte lokale ERP-Vorbereitung sind getrennte eigene Programme. Der folgende Entwurf ist kein importierbares Power-Automate-Paket.
+Power Automate, SharePoint und SAP wurden in diesem Projekt **nicht praktisch ausgeführt**. Der [lokale Prozess](src/prozess.cjs) und die [lokale ERP-Vorbereitung](ERP_UEBERGABE.md) sind getrennte eigene Programme. Der folgende Entwurf ist kein importierbares Power-Automate-Paket.
 
 ## Geplanter kleiner Flow bei später verfügbarem Zugang
 

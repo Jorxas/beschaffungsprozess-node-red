@@ -1,0 +1,16 @@
+{
+  "name": "beschaffung-node-red",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lokaler visueller Beschaffungsablauf mit synthetischen Daten",
+  "scripts": {
+    "start": "node starten.cjs",
+    "test": "node nachweise/pruefen.cjs"
+  },
+  "dependencies": {
+    "node-red": "5.0.10"
+  },
+  "engines": {
+    "node": ">=22.9"
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {"id":"beschaffung","type":"tab","label":"Beschaffung lokal","info":"Synthetische Vorführung. Keine Microsoft- oder SAP-Anbindung. KI-unterstützt erstellt."},
+  {"id":"beschreibung","type":"comment","z":"beschaffung","name":"Nur lokal: feste Beispieldaten, zwei Exporte, keine echte Freigabe","x":350,"y":40,"wires":[]},
+  {"id":"handstart","type":"inject","z":"beschaffung","name":"Vorführung auslösen","props":[{"p":"payload"}],"once":false,"repeat":"","crontab":"","payload":"{}","payloadType":"json","x":130,"y":100,"wires":[["vorbereiten"]]},
+  {"id":"httpstart","type":"http in","z":"beschaffung","name":"Vorführung per HTTP","url":"/beschaffung/vorfuehren","method":"post","upload":false,"swaggerDoc":"","x":140,"y":160,"wires":[["vorbereiten"]]},
+  {"id":"vorbereiten","type":"function","z":"beschaffung","name":"Anträge prüfen und entscheiden","func":"msg.vorbereitung = global.get('beschaffung').vorbereiten(msg.payload);\nreturn msg;","outputs":1,"timeout":0,"x":430,"y":120,"wires":[["exportieren"]]},
+  {"id":"exportieren","type":"function","z":"beschaffung","name":"ERP-Vertrag und Duplikate prüfen","func":"msg.vorbereitung = global.get('beschaffung').exportieren(msg.vorbereitung);\nreturn msg;","outputs":1,"timeout":0,"x":740,"y":120,"wires":[["sichern"]]},
+  {"id":"sichern","type":"function","z":"beschaffung","name":"Momentaufnahme atomar sichern","func":"msg.payload = global.get('beschaffung').sichern(msg.vorbereitung);\nmsg.statusCode = 200;\ndelete msg.vorbereitung;\nreturn msg;","outputs":1,"timeout":0,"x":740,"y":200,"wires":[["ausgabe","antwortwahl"]]},
+  {"id":"standeingang","type":"http in","z":"beschaffung","name":"Gespeicherten Stand lesen","url":"/beschaffung/stand","method":"get","upload":false,"swaggerDoc":"","x":160,"y":280,"wires":[["standlesen"]]},
+  {"id":"standlesen","type":"function","z":"beschaffung","name":"Stand ohne neuen Prozesslauf","func":"msg.payload = global.get('beschaffung').lesen();\nmsg.statusCode = msg.payload ? 200 : 404;\nif (!msg.payload) msg.payload = {hinweis:'Noch keine Vorführung gespeichert.'};\nreturn msg;","outputs":1,"timeout":0,"x":450,"y":280,"wires":[["antwortwahl"]]},
+  {"id":"gesundheit","type":"http in","z":"beschaffung","name":"Betriebsprüfung","url":"/gesundheit","method":"get","upload":false,"swaggerDoc":"","x":130,"y":360,"wires":[["gesundantwort"]]},
+  {"id":"gesundantwort","type":"function","z":"beschaffung","name":"Lokale Laufzeit antwortet","func":"msg.payload={zustand:'bereit',produkt:'Node-RED',umfang:'lokale Lernvariante'};\nreturn msg;","outputs":1,"x":430,"y":360,"wires":[["antwortwahl"]]},
+  {"id":"fehlerfangen","type":"catch","z":"beschaffung","name":"Fachfehler auffangen","scope":["vorbereiten","exportieren","sichern","standlesen"],"uncaught":false,"x":150,"y":440,"wires":[["fehlermeldung"]]},
+  {"id":"fehlermeldung","type":"function","z":"beschaffung","name":"Fehler nachvollziehbar melden","func":"msg.statusCode = msg.error.source.id === 'vorbereiten' ? 400 : 500;\nmsg.payload={fehler:msg.error.message};\ndelete msg.error;\nreturn msg;","outputs":1,"x":450,"y":440,"wires":[["ausgabe","antwortwahl"]]},
+  {"id":"antwortwahl","type":"function","z":"beschaffung","name":"Nur HTTP-Aufrufe beantworten","func":"return msg.res ? msg : null;","outputs":1,"x":1030,"y":280,"wires":[["httpantwort"]]},
+  {"id":"httpantwort","type":"http response","z":"beschaffung","name":"JSON-Antwort","statusCode":"","headers":{"Content-Type":"application/json; charset=utf-8"},"x":1290,"y":280,"wires":[]},
+  {"id":"ausgabe","type":"debug","z":"beschaffung","name":"Ergebnis der lokalen Vorführung","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","targetType":"msg","x":1050,"y":440,"wires":[]}
+]

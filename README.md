@@ -4,7 +4,7 @@ Kleine Beschaffungsanträge sollen mit getrennten Rollen und überprüfbaren Bet
 
 ![Projektaufbau](dokumentation/ueberblick.svg)
 
-**Veröffentlichungsstand: Phase 3/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
+**Veröffentlichungsstand: Phase 4/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Alle vier dokumentierten Basisphasen sind veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
 
 ## Was hier zu sehen ist
 
@@ -13,7 +13,7 @@ Kleine Beschaffungsanträge sollen mit getrennten Rollen und überprüfbaren Bet
 | 1 | Prozess- und Rollenvertrag | Ja |
 | 2 | Lokaler Zustandsautomat | Ja |
 | 3 | Voraussetzungen und Produktgrenzen | Ja |
-| 4 | Exportvertrag, Wiederholung und Node-RED-Zusatz | Folgt |
+| 4 | Exportvertrag, Wiederholung und Node-RED-Zusatz | Ja |
 
 ## Fachlicher Nutzen
 
@@ -26,6 +26,9 @@ Im geklonten Repository ausführen; die benötigte Laufzeit muss installiert sei
 ```powershell
 node src/prozess.cjs
 node nachweise/pruefe_prozess.cjs
+node src/vorfuehren.cjs
+npm --prefix node-red ci --ignore-scripts
+npm --prefix node-red test
 ```
 
 Ausführliche technische Befehle: [START.md](START.md). [Öffentlicher Prüfstand](ABNAHME.json) und [Quellphasen](VERLAUF.json) dokumentieren Herkunft und echte Ausführungsdaten. Eine neue Repositorykopie ist kein neuer nativer Desktoplauf.
@@ -44,8 +47,6 @@ Neu erzeugen: `node demo/erzeugen.cjs` (kopiert das Projekt in einen Temporäror
 ## Ergebnis des lokal geprüften Schlussstands
 
 Zwei gültige lokale Exporte, Konfliktschutz und unveränderte Wiederholung. Node-RED separat mit echtem Neustart geprüft.
-
-**Dieser Schlussstand ist lokal bereits geprüft, aber noch nicht vollständig in diesem Repository veröffentlicht.** Maßgeblich für den hier verfügbaren Code ist die Phasentabelle oben.
 
 ## Grenzen
 

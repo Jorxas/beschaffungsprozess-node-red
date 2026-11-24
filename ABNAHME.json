@@ -1,14 +1,15 @@
 {
   "projekt": "P12",
-  "phase": 3,
-  "snapshot": "32e226b157b6b77e8a91e7286a07c2ad57329e345892aee314962e9b4cc818ee",
+  "phase": 4,
+  "snapshot": "6e371e7614cfa27287759c2c37b41b565f8b1b52a7634f5498d3b542a895f951",
   "quellcommit": null,
   "lokal_committet_am": null,
-  "technisch_gesichert_am": "2026-11-17T23:38:35.639Z",
+  "technisch_gesichert_am": "2026-11-17T23:40:20.713Z",
   "unveraenderlicher_quellstand_geprueft": true,
   "redaktionell_angepasst": [
     "START.md",
-    "nachweise/P12-T02-abschluss.json"
+    "nachweise/P12-T02-abschluss.json",
+    "nachweise/P12-erp-export-pruefung.json"
   ],
   "hinweis": "Bereits zuvor entwickelte und geprüfte Phase; diese GitHub-Veröffentlichung hat ihr tatsächliches neues Datum. Kein historischer Git-Commit oder menschlicher Zeitaufwand erfunden.",
   "quellart": "gepruefter-unveraenderlicher-snapshot"
