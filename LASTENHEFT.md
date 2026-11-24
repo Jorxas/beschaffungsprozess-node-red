@@ -12,10 +12,10 @@ Lokale Einzelbenutzung, synthetische Daten und ein vorführbarer kleiner Ablauf.
 
 ## Abnahmekriterien
 
-- [ ] A1 — Antrag von Entwurf zu eingereicht und anschließend genehmigt oder abgelehnt überführen.
-- [ ] A2 — Verantwortung, Entscheidungskriterium, Betrag und Änderungsspur angeben.
+- [x] A1 — Antrag von Entwurf zu eingereicht und anschließend genehmigt oder abgelehnt überführen.
+- [x] A2 — Verantwortung, Entscheidungskriterium, Betrag und Änderungsspur angeben.
 - [ ] A3 — ERP-Vertrag und tatsächlichen SAP-Lauf klar unterscheiden.
-- [ ] A4 — Für Power Automate, SharePoint und SAP einen echten Nachweis oder einen ausdrücklichen Blockierungsgrund führen.
+- [x] A4 — Für Power Automate, SharePoint und SAP einen echten Nachweis oder einen ausdrücklichen Blockierungsgrund führen.
 
 ## Voraussetzungen
 
@@ -44,3 +44,5 @@ Eine gültige Eingabe, einen Fehlerfall, das Ergebnis und die zuständige Quellc
 Modellierung eines Beschaffungsablaufs; Microsoft- oder SAP-Produkte nur bei tatsächlicher Verwendung nennen.
 
 Derzeit zutreffend: „Eigenes Lernprojekt in Vorbereitung: Beschaffungsantrag und Freigabeprozess“. „Umgesetzt“ setzt die tatsächliche Abnahme voraus.
+
+18. November: A1/A2 durch den tatsächlichen lokalen Prozesslauf geprüft. A4 durch ausdrückliche Produktblockierungsgründe erfüllt; dies ist kein Produktkompetenznachweis. A3 folgt mit dem lokalen Exportentwurf in T04.

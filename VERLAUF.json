@@ -4,6 +4,7 @@
     "ticket": "P12-T01",
     "quellcommit": "d2cb89b011fa4890e5b33597d90c6fc76b8593a7",
     "lokal_committet_am": "2026-11-02T23:21:43+01:00",
+    "technisch_gesichert_am": "2026-11-01T16:20:51.612Z",
     "snapshot": "db34a4246d2545902240a42ee954f51ce258a9a24e728cf9208325c4236f94ca"
   },
   {
@@ -11,6 +12,15 @@
     "ticket": "P12-T02",
     "quellcommit": "65ac5ac49fd64965883bce2b2048509801468377",
     "lokal_committet_am": "2026-11-03T17:13:21+01:00",
+    "technisch_gesichert_am": "2026-11-02T04:05:55.310Z",
     "snapshot": "dfa1a43bb14a849b3f60e6782db2219baee39b55dc577245786e9daf70b116a6"
+  },
+  {
+    "phase": 3,
+    "ticket": "P12-T03",
+    "quellcommit": null,
+    "lokal_committet_am": null,
+    "technisch_gesichert_am": "2026-11-17T23:38:35.639Z",
+    "snapshot": "32e226b157b6b77e8a91e7286a07c2ad57329e345892aee314962e9b4cc818ee"
   }
 ]

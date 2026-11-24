@@ -7,3 +7,5 @@ Alle folgenden Erweiterungen sind **geplant, noch nicht umgesetzt**. Aufwand kom
 - [P12-V03](tickets/P12-V03.md) — BPMN / Jira / Confluence, 60 Minuten ohne Einrichtung.
 
 Eine im Unternehmensprofil genannte Technologie ist nicht automatisch eine Pflichtanforderung der Stelle. Das konkrete Stellenprofil prüfen und für jedes tatsächlich verwendete Produkt einen eigenen Nachweis führen.
+
+18. November 2026: P12-V01 (Power Automate/M365/SharePoint) und P12-V02 (SAP/ABAP/OData) bleiben wegen fehlenden bzw. nicht nachgewiesenen Zugangs ausdrücklich blockiert. Die lokale bedingte Basisabnahme hebt diese Produktsperren nicht auf. P12-V03 weiterhin geplant.

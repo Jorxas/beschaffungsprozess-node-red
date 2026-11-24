@@ -1,15 +1,15 @@
 {
   "projekt": "P12",
-  "phase": 2,
-  "snapshot": "dfa1a43bb14a849b3f60e6782db2219baee39b55dc577245786e9daf70b116a6",
-  "quellcommit": "65ac5ac49fd64965883bce2b2048509801468377",
-  "lokal_committet_am": "2026-11-03T17:13:21+01:00",
-  "technisch_gesichert_am": "2026-11-02T04:00:16.505Z",
+  "phase": 3,
+  "snapshot": "32e226b157b6b77e8a91e7286a07c2ad57329e345892aee314962e9b4cc818ee",
+  "quellcommit": null,
+  "lokal_committet_am": null,
+  "technisch_gesichert_am": "2026-11-17T23:38:35.639Z",
   "unveraenderlicher_quellstand_geprueft": true,
   "redaktionell_angepasst": [
     "START.md",
     "nachweise/P12-T02-abschluss.json"
   ],
-  "hinweis": "Lokale Pfade in Berichten entfernt; Quellprogramme nicht übersetzt oder simuliert. Die erste öffentliche Übernahme ist kein nachträglich erfundener Entwicklungsschritt. Native Produktnachweise behalten ihre ursprünglichen tatsächlichen Zeiten.",
-  "veroeffentlichungskopie_fachlich_geprueft_am": "2026-11-18T15:21:50.951Z"
+  "hinweis": "Bereits zuvor entwickelte und geprüfte Phase; diese GitHub-Veröffentlichung hat ihr tatsächliches neues Datum. Kein historischer Git-Commit oder menschlicher Zeitaufwand erfunden.",
+  "quellart": "gepruefter-unveraenderlicher-snapshot"
 }

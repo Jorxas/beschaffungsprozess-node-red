@@ -4,7 +4,7 @@ Kleine Beschaffungsanträge sollen mit getrennten Rollen und überprüfbaren Bet
 
 ![Projektaufbau](dokumentation/ueberblick.svg)
 
-**Veröffentlichungsstand: Phase 2/4.** Dieses eigenständige Repository übernimmt zunächst den bereits lokal committeten Stand. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
+**Veröffentlichungsstand: Phase 3/4.** Dieses eigenständige Repository veröffentlicht zuvor lokal entwickelte, geprüfte und unveränderlich gesicherte Stände. Weitere fachliche Phasen werden im Abstand von mindestens vier Stunden veröffentlicht. Die technische Entwicklung und die öffentliche Veröffentlichung haben unterschiedliche echte Zeitpunkte.
 
 ## Was hier zu sehen ist
 
@@ -12,7 +12,7 @@ Kleine Beschaffungsanträge sollen mit getrennten Rollen und überprüfbaren Bet
 |---|---|---|
 | 1 | Prozess- und Rollenvertrag | Ja |
 | 2 | Lokaler Zustandsautomat | Ja |
-| 3 | Voraussetzungen und Produktgrenzen | Folgt |
+| 3 | Voraussetzungen und Produktgrenzen | Ja |
 | 4 | Exportvertrag, Wiederholung und Node-RED-Zusatz | Folgt |
 
 ## Fachlicher Nutzen
